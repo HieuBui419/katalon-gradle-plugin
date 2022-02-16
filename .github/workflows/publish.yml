@@ -16,6 +16,6 @@ jobs:
       - name: Build Only
         run: |
           echo "${{ secrets.GRADLE_SECRET == 'qwerty'}}"
-          echo "${{ env.GRADLE_USR == 'hieu'}}"
-          echo "${{ env.GRADLE_PSW == '1234'}}"
+          echo "${{ secrets.GRADLE_USR == 'hieu'}}"
+          echo "${{ secrets.GRADLE_PSW == '1234'}}"
           
