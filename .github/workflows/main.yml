@@ -12,4 +12,6 @@ jobs:
 
     steps:
       - name: Build Only
-        run: gradle clean build
+        run: | 
+          gradle init
+          gradle clean build
