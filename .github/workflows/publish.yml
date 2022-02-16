@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    environment: Gradle
     steps:
       - uses: actions/checkout@master
      # - uses: gradle/gradle-build-action@v2
