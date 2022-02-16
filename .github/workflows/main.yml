@@ -12,7 +12,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@master
+      - uses: gradle/gradle-build-action@v2
+        with:
+          gradle-version: 6.7
       - name: Build Only
-        run: | 
-          gradle wrapper --gradle-version 6.7
+        run: |
           gradle clean build
