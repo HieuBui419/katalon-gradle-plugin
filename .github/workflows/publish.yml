@@ -1,0 +1,21 @@
+name: Gradle
+
+on:
+  push:
+    branches: master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+      - uses: gradle/gradle-build-action@v2
+        with:
+          gradle-version: 6.7
+      - name: Build Only
+        run: |
+          echo "${{ env.GRADLE_PUBLISH_USR }}"
+          echo "${{ env.GRADLE_PUBLISH_PSW }}"
+          gradle clean build
+          gradle publishPlugins -Pgradle.publish.key=<key> -Pgradle.publish.secret=<secret>
