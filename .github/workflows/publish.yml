@@ -15,7 +15,7 @@ jobs:
        #   gradle-version: 6.7
       - name: Build Only
         run: |
-          echo "${{ secrets.GRADLE_SECRET }}"
+          echo "${{ secrets.GRADLE_SECRET == 'qwerty'}}"
           echo "${{ env.GRADLE_PUBLISH_USR }}"
           echo "${{ env.GRADLE_PUBLISH_PSW }}"
           
