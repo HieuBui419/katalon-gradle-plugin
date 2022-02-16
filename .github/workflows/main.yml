@@ -14,5 +14,5 @@ jobs:
       - uses: actions/checkout@master
       - name: Build Only
         run: | 
-          # gradle init
+          gradle wrapper --gradle-version 6.7
           gradle clean build
