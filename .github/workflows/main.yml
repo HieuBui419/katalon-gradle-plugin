@@ -11,7 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@master
       - name: Build Only
         run: | 
-          gradle init
-          gradle build
+          # gradle init
+          gradle clean build
