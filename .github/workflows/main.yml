@@ -14,5 +14,4 @@ jobs:
       - name: Build Only
         run: | 
           gradle init
-          gradle task
-          gradle clean build
+          gradle build
