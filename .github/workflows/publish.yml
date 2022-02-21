@@ -15,6 +15,8 @@ jobs:
        #   gradle-version: 6.7
       - name: Build Only
         run: |
+          java -version
+          gradle clean build
           echo "${{ secrets.GRADLE_SECRET == 'qwerty'}}"
           echo "${{ secrets.GRADLE_USR == 'hieu'}}"
           echo "${{ secrets.GRADLE_PSW == '1234'}}"
